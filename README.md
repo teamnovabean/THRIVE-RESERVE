@@ -10,7 +10,7 @@ assets/css/thrive.css
 assets/js/dusk.js           scroll-driven sunset between the light and dark halves
 assets/js/site.js           sign-up forms, sticky phone button, scroll animations
 functions/api/subscribe.js  saves early-access sign-ups (Cloudflare Pages Function)
-assets/favicon.svg          the jar-and-leaves mark from the logo
+assets/favicon.svg          the sage leaf from the logo
 assets/photos/              each photo at 1400px and 760px wide (webp)
 ```
 

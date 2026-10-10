@@ -65,13 +65,22 @@ figure { margin: 0; }
 .nav-dark .links { color: var(--night-soft); }
 .nav-dark .links a:hover { color: var(--night-ink); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.mark { width: 26px; height: 34px; }
-.brand-name { font-family: var(--serif); font-weight: 600; font-size: 22px; line-height: 1; white-space: nowrap; }
-.brand-name span {
-  font-family: var(--sans); font-weight: 500; font-size: 11px; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--sage); margin-left: 4px; vertical-align: 3px;
-}
+.brand { display: flex; align-items: center; text-decoration: none; }
+
+/* Logo: lowercase "thrive" with a sage leaf for the dot of the i, and
+   RESERVE spaced beneath. Everything scales from --w, the word's size;
+   proportions follow the approved Concept D artboard (word 120px,
+   RESERVE 26px at 0.42em tracking, leaf 34px). */
+.logo { --w: 34px; --logo-ink: var(--ink); --logo-bg: var(--sun);
+  display: inline-flex; flex-direction: column; align-items: center; font-size: var(--w); line-height: 1; }
+.logo-word { font-family: var(--serif); font-weight: 600; font-size: 1em; letter-spacing: -0.01em; color: var(--logo-ink); transition: color 0.5s ease; }
+.logo-i { position: relative; display: inline-block; }
+.logo-leaf { position: absolute; left: 50%; top: -0.05em; width: 0.2833em; height: 0.2833em; transform: translateX(-46%) rotate(-24deg); overflow: visible; }
+.logo-leaf .leaf { fill: var(--sage); }
+.logo-leaf .vein { fill: none; stroke: var(--logo-bg); stroke-width: 2; stroke-linecap: round; opacity: 0.6; transition: stroke 0.5s ease; }
+.logo-sub { font-family: var(--sans); font-weight: 500; font-size: max(0.2167em, 9.5px); letter-spacing: 0.42em; padding-left: 0.42em; color: var(--sage); margin-top: var(--sub-gap, 0.035em); }
+.nav-dark .logo { --logo-ink: var(--night-ink); --logo-bg: var(--night); }
+.foot-logo .logo { --w: 56px; --logo-ink: var(--night-ink); --logo-bg: var(--night); }
 .links { display: flex; gap: 32px; font-size: 14px; color: var(--ink-soft); }
 .links a { text-decoration: none; }
 .links a:hover { color: var(--ink); }
@@ -254,7 +263,6 @@ figure { margin: 0; }
 
 .foot { background: var(--night); color: var(--night-soft); padding: 40px 0; font-size: 13px; }
 .foot-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.foot .brand-name { color: var(--night-ink); font-size: 18px; }
 
 /* ---------- Sign-up and conversion ---------- */
 .sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
