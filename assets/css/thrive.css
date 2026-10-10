@@ -140,58 +140,31 @@ figure { margin: 0; }
   .wide img { aspect-ratio: 4 / 3; }
 }
 
-/* Dusk: sunny cream fades through golden hour into night.
+/* Dusk: the cream page fades to night between Family and Recovery.
    Without JS (or with reduced motion) it is a still gradient band;
-   dusk.js adds .dusk-live and drives the sunset from scroll position. */
+   dusk.js adds .dusk-live and drives the fade from scroll position. */
 .dusk {
   position: relative;
-  background: linear-gradient(180deg,
-    var(--cream) 0%,
-    #F4E3C6 20%,
-    #E8BD88 40%,
-    #A06F4D 60%,
-    #3B2C24 80%,
-    var(--night) 100%);
+  background: linear-gradient(180deg, var(--cream) 0%, #CFC8BA 35%, #5B574F 70%, var(--night) 100%);
 }
 .dusk-stage {
   position: relative; min-height: 80vh; overflow: hidden;
   display: flex; align-items: flex-end; padding: 120px 0 96px;
 }
-.dusk-stars, .dusk-sun, .dusk-horizon { display: none; }
-.dusk-copy { width: 100%; position: relative; z-index: 3; }
+.dusk-copy { width: 100%; position: relative; }
 .dusk-line {
   font-family: var(--serif); font-size: clamp(30px, 4.4vw, 52px); line-height: 1.2;
   color: var(--night-ink);
 }
 
-.dusk-live .dusk { height: 260vh; background: var(--night); }
+.dusk-live .dusk { height: 180vh; background: var(--night); }
 .dusk-live .dusk-stage {
   position: sticky; top: 0; height: 100vh; min-height: 0; padding: 0;
-  align-items: center;
-  background: linear-gradient(180deg, var(--sky-top, var(--cream)) 0%, var(--sky-bottom, #F7E6C8) 100%);
-}
-.dusk-live .dusk-stars, .dusk-live .dusk-sun, .dusk-live .dusk-horizon { display: block; }
-.dusk-stars { position: absolute; inset: 0 0 30% 0; opacity: var(--stars, 0); z-index: 0; }
-.dusk-stars i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #F4F1E6; }
-.dusk-sun {
-  position: absolute; left: 62%; top: 0; z-index: 1;
-  width: clamp(110px, 14vw, 190px); aspect-ratio: 1; border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, var(--sun-core, #FFF4D6) 0%, var(--sun-edge, #FFD98A) 70%, transparent 71%);
-  box-shadow: 0 0 120px 40px var(--sun-glow, rgba(255, 214, 140, 0.45));
-  transform: translate(-50%, var(--sun-y, 18vh));
-}
-.dusk-horizon {
-  position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 30vh; z-index: 2;
-  fill: var(--land, #E7DCC7);
+  align-items: center; background: var(--sky, var(--cream));
 }
 .dusk-live .dusk-line { color: var(--line-ink, var(--ink)); }
 .dusk-live .dusk-line .l1 { opacity: var(--l1, 0); }
 .dusk-live .dusk-line .l2 { opacity: var(--l2, 0); }
-.dusk-live .dusk-copy { align-self: flex-start; padding-top: 22vh; }
-@media (max-width: 600px) {
-  .dusk-sun { left: 70%; }
-  .dusk-live .dusk-copy { padding-top: 16vh; }
-}
 
 /* Dark: sport, wellness and recovery */
 .dark { background: var(--night); color: var(--night-ink); }

@@ -7,18 +7,18 @@ repo. No build step: Pages serves `index.html` and `assets/` as they are
 ```
 index.html
 assets/css/thrive.css
-assets/js/dusk.js           scroll-driven sunset between the light and dark halves
+assets/js/dusk.js           scroll-driven fade from cream to night between the two halves
 assets/js/site.js           sign-up forms, sticky phone button, scroll animations
 functions/api/subscribe.js  saves early-access sign-ups (Cloudflare Pages Function)
 assets/favicon.svg          the sage leaf from the logo
 assets/photos/              each photo at 1400px and 760px wide (webp)
 ```
 
-The page opens light and sunny (Home and Family), then a sunset plays as you
-scroll: the section pins, the sun sinks behind a skyline, the sky goes from
-cream to gold to night and the menu bar turns dark. Recovery (sport, wellness
-and fitness) follows in the dark. With reduced motion turned on, or without
-JavaScript, the sunset is a still gradient band instead.
+The page opens light and sunny (Home and Family), then fades to night as you
+scroll: the section pins, the cream background darkens smoothly to black,
+two lines fade in and the menu bar turns dark. Recovery (sport, wellness and
+fitness) follows in the dark. With reduced motion turned on, or without
+JavaScript, the fade is a still gradient band instead.
 
 Everything else animates gently on scroll too: the hero eases in on load,
 sections fade up as they arrive, lists and cards appear one after another,
