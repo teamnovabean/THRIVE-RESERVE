@@ -189,6 +189,7 @@ figure { margin: 0; }
 
 .themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-bottom: 88px; }
 .theme img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; }
+.theme img.pos-left { object-position: 18% center; }
 .theme h3 { font-size: 22px; margin-top: 18px; }
 .theme p { color: var(--night-soft); font-size: 15px; margin-top: 6px; }
 @media (max-width: 860px) {
