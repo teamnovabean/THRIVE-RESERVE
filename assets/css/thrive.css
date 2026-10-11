@@ -262,13 +262,6 @@ figure { margin: 0; }
 .quote-inner p { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.45; }
 .quote-inner span { display: block; margin-top: 20px; font-size: 13px; color: var(--sage); letter-spacing: 0.06em; }
 
-.story { padding: 96px 0; }
-.story h2 { font-size: clamp(30px, 3.8vw, 44px); }
-.story-lede { color: var(--night-soft); font-size: 18px; max-width: 52ch; margin-top: 18px; }
-.promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--night-line); }
-.promises h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--sage); letter-spacing: 0.02em; }
-.promises p { color: var(--night-soft); font-size: 15px; margin-top: 8px; }
-@media (max-width: 760px) { .story { padding: 64px 0; } .promises { grid-template-columns: 1fr; gap: 28px; } }
 
 .opening { background: var(--green); color: #fff; text-align: center; padding: 96px 0; }
 .opening h2 { font-size: clamp(28px, 3.6vw, 42px); max-width: 22ch; margin: 0 auto; }
@@ -312,7 +305,7 @@ figure { margin: 0; }
 
 /* FAQ (dark, between Our story and the green sign-up) */
 .faq { background: var(--night); color: var(--night-ink); padding: 0 0 96px; }
-.faq-inner { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; border-top: 1px solid var(--night-line); padding-top: 64px; }
+.faq-inner { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; padding-top: 80px; }
 .faq h2 { font-size: clamp(28px, 3.4vw, 40px); }
 .faq details { border-bottom: 1px solid var(--night-line); }
 .faq summary {

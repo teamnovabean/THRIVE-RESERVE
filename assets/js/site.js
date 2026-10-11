@@ -88,7 +88,6 @@
     ['.items', 'li'],
     ['.themes', '.theme'],
     ['.mosaic', 'img'],
-    ['.promises', 'div'],
     ['.faq-list', 'details'],
     ['.together', 'figure'],
     ['.quiet-grid', 'figure'],
@@ -97,8 +96,7 @@
   var singles = [
     '.feeling h2', '.relief', '.collection figure', '.copy .eyebrow', '.copy h2', '.copy > p',
     '.notify', '.recovery-intro > p:first-child', '.recovery-cta', '.family-team img',
-    '.family-team h3', '.family-team p', '.quote-inner', '.story .eyebrow', '.story h2',
-    '.story-lede', '.faq h2', '.opening h2', '.opening-inner > p', '.signup-full', '.quiet-close'
+    '.family-team h3', '.family-team p', '.quote-inner', '.faq h2', '.opening h2', '.opening-inner > p', '.signup-full', '.quiet-close'
   ];
   var targets = [];
   groups.forEach(function (g) {
