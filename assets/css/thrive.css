@@ -218,6 +218,45 @@ figure { margin: 0; }
 .family-team p { color: var(--night-soft); font-size: 17px; margin-top: 18px; max-width: 40ch; }
 @media (max-width: 860px) { .family-team { grid-template-columns: 1fr; gap: 32px; padding-top: 64px; padding-bottom: 64px; } }
 
+/* Captions under photos: the serif voice of the brand, small and quiet. */
+.together figcaption, .quiet figcaption {
+  font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.4;
+  color: var(--night-ink); margin-top: 16px;
+}
+.together { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; padding-bottom: 104px; }
+.together img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
+@media (max-width: 760px) { .together { grid-template-columns: 1fr; gap: 42px; padding-bottom: 68px; } }
+
+/* For the moms. Type and spacing step by the golden ratio from the 16px body:
+   16 → 26 → 42 → 68 (logo word). */
+.quiet { padding: 110px 0; border-top: 1px solid var(--night-line); }
+.quiet-head { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 640px; margin: 0 auto; }
+.quiet-logo { --w: 68px; --logo-ink: var(--night-ink); --logo-bg: var(--night); margin-bottom: 42px; }
+.quiet-head .eyebrow { margin-bottom: 16px; }
+.quiet-head h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.2; text-wrap: balance; }
+.quiet-lede { color: var(--night-soft); font-size: 17px; line-height: 1.62; max-width: 42ch; margin-top: 26px; }
+.quiet-grid {
+  display: grid; grid-template-columns: 1.618fr 1fr; grid-template-rows: auto auto;
+  gap: 26px 42px; margin-top: 68px;
+}
+.quiet-grid img { width: 100%; object-fit: cover; border-radius: 2px; }
+.quiet-main { grid-row: span 2; }
+.quiet-main img { aspect-ratio: 4 / 3.6; }
+.quiet-grid figure:not(.quiet-main) img { aspect-ratio: 4 / 3; }
+.quiet-main figcaption { font-size: 26px; }
+.quiet-close {
+  font-family: var(--serif); font-size: clamp(22px, 2.6vw, 26px); line-height: 1.4;
+  color: var(--night-ink); text-align: center; margin-top: 68px; text-wrap: balance;
+}
+@media (max-width: 860px) {
+  .quiet { padding: 68px 0; }
+  .quiet-logo { --w: 52px; margin-bottom: 26px; }
+  .quiet-grid { grid-template-columns: 1fr; gap: 42px; margin-top: 42px; }
+  .quiet-main { grid-row: auto; }
+  .quiet-main figcaption { font-size: 22px; }
+  .quiet-close { margin-top: 42px; }
+}
+
 .quote { padding: 80px 0; border-top: 1px solid var(--night-line); border-bottom: 1px solid var(--night-line); background: var(--night-2); }
 .quote-inner { max-width: 760px; }
 .quote-inner p { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.45; }
