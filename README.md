@@ -48,6 +48,13 @@ sending people to the site.
 Preview locally: `python3 -m http.server` in this folder, then open
 http://localhost:8000.
 
+## Caching
+
+Photos are cached for a day; the stylesheet and scripts are checked for a
+fresh copy on every visit (see `_headers`). The page also loads them as
+`thrive.css?v=2`, `site.js?v=2` and so on: bump that number whenever you
+change them, so browsers holding an old copy fetch the new one at once.
+
 ## Still placeholder
 - The shop isn't open: no prices or cart yet. The early-access list is the
   only thing to sign up for.
