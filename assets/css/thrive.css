@@ -100,12 +100,20 @@ figure { margin: 0; }
 }
 
 .pillars { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--sun); }
+/* The three pillars sit centred as one group, evenly spaced, with a sage
+   dot between them (not in front of each). Phones stack them, no dots. */
 .pillars-inner {
-  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   padding-top: 18px; padding-bottom: 18px; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.02em;
 }
-.pillars-inner span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--sage); margin-right: 10px; vertical-align: 2px; }
-@media (max-width: 600px) { .pillars-inner { flex-direction: column; gap: 8px; } }
+.pillars-inner span + span::before {
+  content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--sage);
+  margin: 0 26px; vertical-align: 2px;
+}
+@media (max-width: 600px) {
+  .pillars-inner { flex-direction: column; gap: 6px; padding-top: 16px; padding-bottom: 16px; }
+  .pillars-inner span + span::before { display: none; }
+}
 
 /* You know the feeling */
 .feeling { padding: 88px 0; }
